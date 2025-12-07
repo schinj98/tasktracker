@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth';
-import connectDB from '@/lib/mongodb';
-import Task from '@/models/Task';
-import User from '@/models/User';
+import { authOptions } from '@/app/lib/auth';
+import connectDB from '@/app/lib/mongodb';
+import Task from '@/app/model/Task';
+import User from '@/app/model/User';
 
 export async function PATCH(request, { params }) {
   try {
